@@ -34,7 +34,7 @@ module.exports = {
   },
   rules: {
     'import/no-cycle': ['error', 
-     { maxDepth: 5 }
+     { maxDepth: 5 }  //  Toggle between 1 and 5. 5 produces more errors when it should produce fewer
     ],
   },
   plugins: [
@@ -44,9 +44,6 @@ module.exports = {
     'import/cache': { lifetime: 10 },
     'import/resolver': {
       'babel-module': {},
-      // 'webpack': {
-      //   'config': '..\\webpack_config\\webpack.config.resolve.js'
-      // }
     },
   },
 };
